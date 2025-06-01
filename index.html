@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Manutenção de Condomínios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="login-page" class="page">
+        <div class="login-wrapper">
+            <div class="login-carousel">
+                <img src="imagens/carrossel 1.png" alt="Propaganda Condomínio 1" class="carousel-image active">
+                <img src="imagens/carrossel 2.png" alt="Propaganda Condomínio 2" class="carousel-image">
+                <img src="imagens/carrossel 3.png" alt="Propaganda Condomínio 3" class="carousel-image">
+            </div>
+            <div class="login-container">
+                <img src="imagens/logo_azul.png" alt="Logo Sindix" class="login-logo logo-light-theme">
+                <img src="imagens/logo_branco.png" alt="Logo Sindix" class="login-logo logo-dark-theme">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username-login">Nome do Usuário:</label>
+                        <input type="text" id="username-login" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-login">Email:</label>
+                        <input type="email" id="email-login" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-login">Senha:</label>
+                        <input type="password" id="password-login" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-page" class="page">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="imagens/logo_branco.png" alt="Logo Sindix Branco" class="sidebar-logo-image">
+                <button id="sidebar-toggle-desktop" class="sidebar-toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active-link" data-target="initial-screen"><i class="fas fa-home"></i> <span class="link-text">Início</span></a></li>
+                    <li><a href="#" class="nav-link" data-target="dashboard-view"><i class="fas fa-tachometer-alt"></i> <span class="link-text">Dashboard</span></a></li>
+                    <li><a href="#" class="nav-link" data-target="tasks"><i class="fas fa-tasks"></i> <span class="link-text">Tarefas</span></a></li>
+                    <li><a href="#" class="nav-link" data-target="providers"><i class="fas fa-hard-hat"></i> <span class="link-text">Prestadores</span></a></li>
+                    <li><a href="#" class="nav-link" data-target="condominiums"><i class="fas fa-building"></i> <span class="link-text">Condomínios</span></a></li>
+                    <li><a href="#" class="nav-link" data-target="users"><i class="fas fa-users"></i> <span class="link-text">Usuários</span></a></li>
+                    <li><a href="#" class="nav-link" data-target="user-profile"><i class="fas fa-user-circle"></i> <span class="link-text">Meu Perfil</span></a></li>
+                    <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> <span class="link-text">Sair</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content" id="main-content">
+            <div class="main-content-header">
+                <button id="sidebar-toggle-mobile" class="sidebar-toggle-btn mobile-toggle"><i class="fas fa-bars"></i></button>
+                <button id="theme-toggle-icon" class="theme-toggle-btn btn icon-btn" aria-label="Alternar Tema">
+                    <i class="fas fa-moon icon-moon"></i>
+                    <i class="fas fa-sun icon-sun"></i>
+                </button>
+            </div>
+
+            <section id="initial-screen" class="content-section">
+                <div class="presentation-intro">
+                    <h1>Bem-vindo <span id="welcome-username">Usuário</span>!</h1>
+                    <p class="lead-paragraph">Sua plataforma completa e intuitiva para uma administração condominial eficiente, transparente e moderna. Transforme a gestão do seu condomínio com ferramentas poderosas e fáceis de usar.</p>
+                </div>
+
+                <div class="alternating-features">
+                    <div class="feature-section"> 
+                        <div class="feature-text">
+                            <h2><i class="fas fa-tasks-alt"></i> Organização de Tarefas Simplificada</h2>
+                            <p>Cansado de planilhas complexas e lembretes perdidos? Com o GestãoCond, você gerencia todas as manutenções preventivas e corretivas de forma centralizada. Agende limpezas, reparos, inspeções e vistorias com poucos cliques. Defina prioridades, prazos, atribua responsáveis e acompanhe o status de cada tarefa em tempo real, garantindo que nada seja esquecido e que seu condomínio funcione perfeitamente. Nossa interface intuitiva permite que você visualize rapidamente o que precisa ser feito, quem é o responsável e qual o progresso, otimizando seu tempo e recursos.</p>
+                        </div>
+                        <div class="feature-image-placeholder" style="background-color: #E0E7FF;"><span>Placeholder Imagem 1</span></div>
+                    </div>
+
+                    <div class="feature-section"> 
+                        <div class="feature-text">
+                            <h2><i class="fas fa-users-cog"></i> Gestão Inteligente de Prestadores</h2>
+                            <p>Mantenha um cadastro completo e atualizado de seus prestadores de serviço. Armazene informações de contato, áreas de atuação, histórico de trabalhos realizados, orçamentos e avaliações dos serviços prestados. Facilite a cotação, a comparação de propostas e a contratação dos melhores profissionais para cada necessidade específica do condomínio, assegurando qualidade, transparência e o melhor custo-benefício para todos os condôminos. Comunique-se diretamente com eles pela plataforma.</p>
+                        </div>
+                        <div class="feature-image-placeholder" style="background-color: #D1FAE5;"><span>Placeholder Imagem 2</span></div>
+                    </div>
+
+                    <div class="feature-section"> 
+                        <div class="feature-text">
+                            <h2><i class="fas fa-building-shield"></i> Controle Total dos Condomínios</h2>
+                            <p>Se você administra múltiplos condomínios, o GestãoCond é seu aliado perfeito. Acesse e gerencie informações detalhadas de cada empreendimento de forma individualizada e segura. Visualize dados cadastrais, documentações importantes, cronogramas de manutenção específicos, histórico de ocorrências e relatórios gerenciais consolidados ou por condomínio, tudo de maneira organizada e acessível de qualquer lugar, a qualquer hora.</p>
+                        </div>
+                        <div class="feature-image-placeholder" style="background-color: #FEF3C7;"><span>Placeholder Imagem 3</span></div>
+                    </div>
+
+                     <div class="feature-section"> 
+                        <div class="feature-text">
+                            <h2><i class="fas fa-chart-line"></i> Relatórios e Histórico Detalhado</h2>
+                            <p>Tome decisões estratégicas baseadas em dados concretos! Gere relatórios customizáveis sobre manutenções realizadas, custos envolvidos, desempenho de prestadores, frequência de problemas e muito mais. Mantenha um histórico completo e rastreável de todas as atividades, facilitando auditorias, o planejamento orçamentário futuro e a prestação de contas aos condôminos com total transparência e profissionalismo.</p>
+                        </div>
+                        <div class="feature-image-placeholder" style="background-color: #FEE2E2;"><span>Placeholder Imagem 4</span></div>
+                    </div>
+                </div>
+
+                <div class="main-navigation-buttons">
+                    <h2>Acesso Rápido às Funcionalidades</h2>
+                    <div class="nav-buttons-grid">
+                        <a href="#" class="btn nav-link main-nav-btn" data-target="dashboard-view"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="#" class="btn nav-link main-nav-btn" data-target="tasks"><i class="fas fa-tasks"></i> Tarefas</a>
+                        <a href="#" class="btn nav-link main-nav-btn" data-target="providers"><i class="fas fa-hard-hat"></i> Prestadores</a>
+                        <a href="#" class="btn nav-link main-nav-btn" data-target="condominiums"><i class="fas fa-building"></i> Condomínios</a>
+                        <a href="#" class="btn nav-link main-nav-btn" data-target="users"><i class="fas fa-users"></i> Usuários</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="dashboard-view" class="content-section">
+                 <div class="section-header"><h1>Dashboard (Resumo Geral)</h1><button class="btn btn-primary nav-link" data-target="initial-screen"><i class="fas fa-arrow-left"></i> Voltar para Início</button></div>
+                 <div class="dashboard-summary">
+                    <div class="summary-card"><h4>Tarefas Pendentes</h4><p id="pending-tasks-count">0</p></div>
+                    <div class="summary-card"><h4>Tarefas em Andamento</h4><p id="inprogress-tasks-count">0</p></div>
+                    <div class="summary-card"><h4>Tarefas Concluídas</h4><p id="completed-tasks-count">0</p></div>
+                    <div class="summary-card"><h4>Tarefas Próximas ao Vencimento</h4><p id="due-soon-tasks-count">0</p></div>
+                </div>
+            </section>
+
+            <section id="tasks" class="content-section"><div class="section-header"><h1>Gerenciar Tarefas</h1><button class="btn btn-primary nav-link" data-target="initial-screen"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-add" onclick="openModal('task-modal', null, 'task')"><i class="fas fa-plus"></i> Nova Tarefa</button></div><table><thead><tr><th>Descrição</th><th>Condomínio</th><th>Data Man.</th><th>Próxima (Prazo)</th><th>Prioridade</th><th>Status</th><th>Situação</th><th>Prestador</th><th>Ações</th></tr></thead><tbody id="tasks-table-body"></tbody></table></section>
+            <section id="providers" class="content-section"><div class="section-header"><h1>Gerenciar Prestadores</h1><button class="btn btn-primary nav-link" data-target="initial-screen"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-add" onclick="openModal('provider-modal', null, 'provider')"><i class="fas fa-plus"></i> Novo Prestador</button></div><table><thead><tr><th>Nome</th><th>Área</th><th>Contato</th><th>Observações</th><th>Ações</th></tr></thead><tbody id="providers-table-body"></tbody></table></section>
+            <section id="condominiums" class="content-section"><div class="section-header"><h1>Gerenciar Condomínios</h1><button class="btn btn-primary nav-link" data-target="initial-screen"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-add" onclick="openModal('condominium-modal', null, 'condominium')"><i class="fas fa-plus"></i> Novo Condomínio</button></div><table><thead><tr><th>Nome</th><th>Endereço</th><th>Responsável</th><th>Contato</th><th>Ações</th></tr></thead><tbody id="condominiums-table-body"></tbody></table></section>
+            <section id="users" class="content-section"><div class="section-header"><h1>Gerenciar Usuários</h1><button class="btn btn-primary nav-link" data-target="initial-screen"><i class="fas fa-arrow-left"></i> Voltar</button><button class="btn btn-add" onclick="openModal('user-modal', null, 'user')"><i class="fas fa-plus"></i> Novo Usuário</button></div><table><thead><tr><th>Nome</th><th>Email</th><th>Tipo</th><th>Ações</th></tr></thead><tbody id="users-table-body"></tbody></table></section>
+            
+            <section id="user-profile" class="content-section"><div class="section-header"><h1>Meu Perfil</h1><button class="btn btn-primary nav-link" data-target="initial-screen"><i class="fas fa-arrow-left"></i> Voltar para Início</button></div><p>Informações e configurações do perfil do usuário aqui...</p></section>
+        </main>
+    </div>
+
+    <div id="task-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('task-modal')">&times;</span><h2 id="task-modal-title"></h2><form id="task-form"><input type="hidden" id="task-id"><div class="form-group"><label for="task-description">Descrição:</label><input type="text" id="task-description" required></div><div class="form-group"><label for="task-condominium">Condomínio:</label><select id="task-condominium" required></select></div><div class="form-group"><label for="task-maintenance-date">Data:</label><input type="date" id="task-maintenance-date" required></div><div class="form-group"><label for="task-due-months">Próxima (meses):</label><input type="number" id="task-due-months" min="0" required></div><div class="form-group"><label for="task-priority">Prioridade:</label><select id="task-priority" required><option value="Baixa">Baixa</option><option value="Média">Média</option><option value="Alta">Alta</option></select></div><div class="form-group"><label for="task-status">Status:</label><select id="task-status" required><option value="Não iniciada">Não iniciada</option><option value="Em andamento">Em andamento</option><option value="Em execução">Em execução</option><option value="Concluída">Concluída</option></select></div><div class="form-group"><label for="task-repeat">Repetir (meses):</label><input type="number" id="task-repeat" min="0"></div><div class="form-group"><label for="task-provider">Prestador:</label><select id="task-provider" required></select></div><div class="form-group"><label for="task-observations">Observações:</label><textarea id="task-observations"></textarea></div><button type="submit" class="btn btn-primary">Salvar</button></form></div></div>
+    <div id="provider-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('provider-modal')">&times;</span><h2 id="provider-modal-title"></h2><form id="provider-form"><input type="hidden" id="provider-id"><div class="form-group"><label for="provider-name">Nome:</label><input type="text" id="provider-name" required></div><div class="form-group"><label for="provider-area">Área:</label><input type="text" id="provider-area" required></div><div class="form-group"><label for="provider-phone">Telefone:</label><input type="tel" id="provider-phone"></div><div class="form-group"><label for="provider-email">E-mail:</label><input type="email" id="provider-email"></div><div class="form-group"><label for="provider-observations">Observações:</label><textarea id="provider-observations"></textarea></div><button type="submit" class="btn btn-primary">Salvar</button></form></div></div>
+    <div id="condominium-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('condominium-modal')">&times;</span><h2 id="condominium-modal-title"></h2><form id="condominium-form"><input type="hidden" id="condominium-id"><div class="form-group"><label for="condominium-name">Nome:</label><input type="text" id="condominium-name" required></div><div class="form-group"><label for="condominium-address">Endereço:</label><input type="text" id="condominium-address" required></div><div class="form-group"><label for="condominium-manager">Responsável:</label><input type="text" id="condominium-manager"></div><div class="form-group"><label for="condominium-contact">Contato:</label><input type="text" id="condominium-contact"></div><button type="submit" class="btn btn-primary">Salvar</button></form></div></div>
+    <div id="user-modal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('user-modal')">&times;</span><h2 id="user-modal-title"></h2><form id="user-form"><input type="hidden" id="user-id"><div class="form-group"><label for="user-name">Nome:</label><input type="text" id="user-name" required></div><div class="form-group"><label for="user-email">E-mail:</label><input type="email" id="user-email" required></div><div class="form-group"><label for="user-password">Senha:</label><input type="password" id="user-password"></div><div class="form-group"><label for="user-access-type">Tipo:</label><select id="user-access-type" required><option value="comum">Comum</option><option value="administrador">Administrador</option></select></div><button type="submit" class="btn btn-primary">Salvar</button></form></div></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
